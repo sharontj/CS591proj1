@@ -1,28 +1,45 @@
+
+# Kill mongod:
+1. find PID:
+```ps -ax
+```
+2. kill it:
+```
+kill pid
+```
+
 # Github Instuctions
 1. Open Terminal
 2. Go to your project directory
 3. Pull
-> git pull
+```
+git pull
+```
 4. Commit and Push:
+```
 > git commit -m “First commit”
 > git push  
-
+```
 
 # Mongo Instuctions
-	1. Open mongo shell:
-> mongo repo -u alyu_sharontj -p alyu_sharontj --authenticationDatabase "repo"
-
-	2. Inside mongo shell:
+1. Remember to use Mongdb with --auth
+```
+mongod --auth --dbpath "<your_db_path>"
+```
+2. Open mongo shell:
+```
+mongo repo -u alyu_sharontj -p alyu_sharontj --authenticationDatabase "repo"
+```
+3. Inside mongo shell:
+```
 >show dbs
 
-	
 >use repo
-	
 
 >show collections
-	
->db.alyu_sharontj.Roads.find()
 
+>db.alyu_sharontj.Roads.find()
+```
 # course-2018-spr-proj
 Joint repository for the collection of student course projects in the Spring 2018 iteration of the Data Mechanics course at Boston University.
 

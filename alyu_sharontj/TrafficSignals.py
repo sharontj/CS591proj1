@@ -28,8 +28,8 @@ class TrafficSignals(dml.Algorithm):
         #features=r['features']
         s = json.dumps(r, sort_keys=True, indent=2)
 
-        repo.dropCollection("TrafficSignal") #name of the data link: e.g. station_links
-        repo.createCollection("TrafficSignal")
+        repo.dropCollection("TrafficSignals") #name of the data link: e.g. station_links
+        repo.createCollection("TrafficSignals")
         repo['alyu_sharontj.TrafficSignals'].insert_many(r['features'])    #insert data into database?
         repo['alyu_sharontj.TrafficSignals'].metadata({'complete':True})
         print(repo['alyu_sharontj.TrafficSignals'].metadata())
