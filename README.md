@@ -1,7 +1,8 @@
 
 # Kill mongod:
 1. find PID:
-```ps -ax
+```
+ps -ax
 ```
 2. kill it:
 ```
