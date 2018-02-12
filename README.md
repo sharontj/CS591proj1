@@ -8,6 +8,21 @@
 > git push  
 
 
+# Mongo Instuctions
+	1. Open mongo shell:
+> mongo repo -u alyu_sharontj -p alyu_sharontj --authenticationDatabase "repo"
+
+	2. Inside mongo shell:
+>show dbs
+
+	
+>use repo
+	
+
+>show collections
+	
+>db.alyu_sharontj.Roads.find()
+
 # course-2018-spr-proj
 Joint repository for the collection of student course projects in the Spring 2018 iteration of the Data Mechanics course at Boston University.
 
