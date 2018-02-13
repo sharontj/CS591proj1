@@ -25,7 +25,7 @@ git pull
 # Mongo Instuctions
 1. Remember to use Mongdb with --auth
 ```
-mongod --auth --dbpath "<your_db_path>"
+mongod --auth
 ```
 2. Open mongo shell:
 ```
