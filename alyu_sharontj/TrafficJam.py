@@ -22,7 +22,7 @@ class TrafficJam(dml.Algorithm):
         #http://bostonopendata-boston.opendata.arcgis.com/datasets/de08c6fe69c942509089e6db98c716a3_0.geojson
 
         # traffic jam
-        url = 'http://datamechanics.io/data/wuhaoyu_yiran123/trafficJam.json'
+        url = 'http://datamechanics.io/data/alyu_sharontj/TrafficJam.json'
         response = urllib.request.urlopen(url).read().decode("utf-8")
         r = json.loads(response)
         s = json.dumps(r, sort_keys=True, indent=2)

@@ -21,7 +21,7 @@ class TrafficSignals(dml.Algorithm):
         repo.authenticate('alyu_sharontj', 'alyu_sharontj')
         #http://bostonopendata-boston.opendata.arcgis.com/datasets/de08c6fe69c942509089e6db98c716a3_0.geojson
 
-        url = 'http://bostonopendata-boston.opendata.arcgis.com/datasets/de08c6fe69c942509089e6db98c716a3_0.geojson' #        url = 'http://datamechanics.io/data/yjunchoi_yzhang71/Station_Links.json'
+        url = 'http://bostonopendata-boston.opendata.arcgis.com/datasets/de08c6fe69c942509089e6db98c716a3_0.geojson'
 
         response = urllib.request.urlopen(url).read().decode("utf-8")
         r = json.loads(response)

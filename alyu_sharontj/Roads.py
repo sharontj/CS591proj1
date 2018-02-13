@@ -10,7 +10,7 @@ import pdb
 import csv
 
 def convert_roads_csv():
-    url = 'http://datamechanics.io/data/bkin18_cjoe/Roads%202013.csv'
+    url = 'http://datamechanics.io/data/alyu_sharontj/Roads%202013.csv'
     csvfile = urllib.request.urlopen(url).read().decode("utf-8")
 
     dict_values = []
