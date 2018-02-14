@@ -1,4 +1,4 @@
-# # Team Member
+# Team Member
 1. Ailing Yu (alyu@bu.edu)
 2. Jin Tang (sharontj@bu.edu)
 
@@ -28,15 +28,15 @@ http://datamechanics.io/data/alyu_sharontj/boston_taz.json
 
 
 # Data Transformation
-We performed three transformations to product three new data set.
+We performed several transformations to product three new data set.
 
-TrafficSignal_Density  
-We processed Traffic Signal Dataset to get the signal density of each street by using MapReduce.
+1. TrafficSignal_Density
+We processed Traffic Signal Dataset to get the signal density of each street by using selection, MapReduce, projection.
 
-SnowEmRoutes_TrafficSignalDensity  
+2. SnowEmRoutes_TrafficSignalDensity
 We processed Traffic Signal Density Dataset and Snow Emergency Route to get the traffic signal density of each snow emergency route by using selection, production, and projection.
 
-TrafficDelay_SignalDensity  
+3. TrafficDelay_SignalDensity
 We processed Traffic Signal Density Dataset and traffic jam data to find the relation between traffic signal density and traffic jam.
 
 
