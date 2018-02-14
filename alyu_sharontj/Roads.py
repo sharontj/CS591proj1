@@ -97,9 +97,9 @@ class Roads(dml.Algorithm):
 
         return doc
 
-
-# get_roads.execute()
-# doc = get_roads.provenance()
+#
+# Roads.execute()
+# doc = Roads.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))
 

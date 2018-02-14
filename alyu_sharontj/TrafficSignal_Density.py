@@ -6,7 +6,7 @@ import datetime
 import uuid
 import pdb
 import re
-from alyu_sharontj.Util import *
+from alyu_sharontj.Util.Util import *
 
 class TrafficSignal_Density(dml.Algorithm):
     contributor = 'alyu_sharontj'
@@ -23,10 +23,10 @@ class TrafficSignal_Density(dml.Algorithm):
         repo = client.repo
         repo.authenticate('alyu_sharontj', 'alyu_sharontj') # should probably move this to auth
 
-        '''get roadname from db.alyu_sharontj.Roads'''
+        '''get (roadname,roadlen) from db.alyu_sharontj.Roads'''
         roadName=[]
         roadDb=repo['alyu_sharontj.Roads']
-        cursor = roadDb.find({'FULLNAME': {'$ne': "NA"}})  #filter not work
+        cursor = roadDb.find()  #filter not work
         for info in cursor:
             fullname = info['"FULLNAME"']
             fullname = re.sub("\"", "", fullname)
@@ -42,7 +42,7 @@ class TrafficSignal_Density(dml.Algorithm):
         #print(validRoadName)
         print(len(validRoadName))
 
-        '''get roadname from db.alyu_sharontj.TrafficSignals
+        '''get (roadname,num_signals) from db.alyu_sharontj.TrafficSignals
         '''
         Sig_Roadname=[]
         sigDb=repo['alyu_sharontj.TrafficSignals']

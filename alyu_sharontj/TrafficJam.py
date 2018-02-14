@@ -86,8 +86,8 @@ class TrafficJam(dml.Algorithm):
                   
         return doc
 
-# GetTrafficSignals.execute()
-# doc = GetTrafficSignals.provenance()
+# TrafficJam.execute()
+# doc = TrafficJam.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))
 

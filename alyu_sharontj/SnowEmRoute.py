@@ -90,8 +90,8 @@ class SnowEmRoute(dml.Algorithm):
         return doc
 
 
-# snow_emergency_routes.execute()
-# doc = snow_emergency_routes.provenance()
+# SnowEmRoute.execute()
+# doc = SnowEmRoute.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))
 

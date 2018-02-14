@@ -88,8 +88,8 @@ class TrafficSignals(dml.Algorithm):
                   
         return doc
 
-# GetTrafficSignals.execute()
-# doc = GetTrafficSignals.provenance()
+# TrafficSignals.execute()
+# doc = TrafficSignals.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))
 
