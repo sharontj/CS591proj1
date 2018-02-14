@@ -62,15 +62,15 @@ class TrafficJam(dml.Algorithm):
         doc.add_namespace('dat', 'http://datamechanics.io/data/') # The data sets are in <user>#<collection> format.
         doc.add_namespace('ont', 'http://datamechanics.io/ontology#') # 'Extension', 'DataResource', 'DataSet', 'Retrieval', 'Query', or 'Computation'.
         doc.add_namespace('log', 'http://datamechanics.io/log/') # The event log.
-        doc.add_namespace('bdp', 'http://bostonopendata-boston.opendata.arcgis.com/datasets/')
+        doc.add_namespace('bdp', 'http://datamechanics.io/data/alyu_sharontj/')
 
         this_script = doc.agent('alg:alyu_sharontj#TrafficJam', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})#change to file name
-        resource = doc.entity('bdp:wc8w-nujj', {'prov:label':'Transportation DataSets', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
+        resource = doc.entity('bdp:wc8w-TrafficJam', {'prov:label':'Transportation DataSets', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
         get_TS = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)  #TS= traffic Signals
 
         doc.wasAssociatedWith(get_TS, this_script)
         doc.usage(get_TS, resource, startTime, None,
-                  {prov.model.PROV_TYPE:'ont:Retrieval',
+                  {prov.model.PROV_TYPE:'ont:Retrieval'
                  # 'ont:Query':'?type=Animal+Found&$select=type,latitude,longitude,OPEN_DT'
                   }
                   )

@@ -72,8 +72,8 @@ class Roads(dml.Algorithm):
         doc.add_namespace('dat', 'http://datamechanics.io/data/') # The data sets are in <user>#<collection> format.
         doc.add_namespace('ont', 'http://datamechanics.io/ontology#') # 'Extension', 'DataResource', 'DataSet', 'Retrieval', 'Query', or 'Computation'.
         doc.add_namespace('log', 'http://datamechanics.io/log/') # The event log.
-        doc.add_namespace('bdp', 'http://bostonopendata-boston.opendata.arcgis.com/datasets/')
-        doc.add_namespace('hdv', 'https://dataverse.harvard.edu/dataset.xhtml')
+        doc.add_namespace('bdp', 'http://datamechanics.io/data/alyu_sharontj/')
+        # doc.add_namespace('hdv', 'https://dataverse.harvard.edu/dataset.xhtml')
 
         this_script = doc.agent('alg:alyu_sharontj#Roads',
             { prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
@@ -81,8 +81,8 @@ class Roads(dml.Algorithm):
         this_run = doc.activity('log:a'+str(uuid.uuid4()), startTime, endTime,
             { prov.model.PROV_TYPE:'ont:Retrieval'})#, 'ont:Query':'?type=Animal+Found&$select=type,latitude,longitude,OPEN_DT'})
 
-        road_input = doc.entity('hdv:DVN_OV5PXF',
-            { 'prov:label':'311, Service Requests', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'csv', 'ont:Query':'?persistentId=doi:10.7910'})
+        road_input = doc.entity('bdp:Roads%202013',
+            { 'prov:label':'Roads', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'csv', 'ont:Query':'?persistentId=doi:10.7910'})
 
         output = doc.entity('dat:alyu_sharontj.Roads', {prov.model.PROV_LABEL:'Roads', prov.model.PROV_TYPE:'ont:DataSet'})
 

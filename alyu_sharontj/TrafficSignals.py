@@ -67,7 +67,7 @@ class TrafficSignals(dml.Algorithm):
         doc.add_namespace('bdp', 'http://bostonopendata-boston.opendata.arcgis.com/datasets/')
 
         this_script = doc.agent('alg:alyu_sharontj#TrafficSignals', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})#change to file name
-        resource = doc.entity('bdp:de08c6fe69c942509089e6db98c716a3_0', {'prov:label':'Traffic Signals', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
+        resource = doc.entity('bdp:de08c6fe69c942509089e6db98c716a3_0', {'prov:label':'Traffic Signals', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'geojson'})
         get_TS = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)  #TS= traffic Signals
 
         doc.wasAssociatedWith(get_TS, this_script)
