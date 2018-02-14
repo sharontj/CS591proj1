@@ -40,7 +40,7 @@ class TrafficSignal_Density(dml.Algorithm):
         validRoadName = select(roadName, lambda t: t[0] != 'NA') #filter unknown road names
         #print(len(validRoadName)) #20233
         #print(validRoadName)
-        print(len(validRoadName))
+        # print(len(validRoadName))
 
         '''get (roadname,num_signals) from db.alyu_sharontj.TrafficSignals
         '''
